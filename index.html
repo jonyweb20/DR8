@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dr8</title>
+</head>
+
+<body>
+    <!--Задание1-->
+     <script>
+         
+    let num1 = +prompt(`Назовите любое число`);
+       if (num1 < 0){
+           alert(`Ваше число меньше 0`);}
+           else if (num1 > 0){
+               alert(`Ваше число больше 0`);
+           }
+       else if (num1 == 0){
+           alert(`Ваше число 0`);
+       }
+       else {
+           alert(`Вы указали не число`)
+       }
+    
+       num1 < 0 ? document.write(`<h2> Ваше число меньше 0 </h2>`): num1 > 0 ? document.write(`<h2>Ваше число больше 0 </h2>`) : (num1 == 0) ? document.write(`<h2> Ваше число 0 </h2>`) : document.write(`<h2>Вы указали не число</h2>`)
+    </script>
+
+<!--Задание2-->
+       <script>
+    let num2 = +prompt(`Назовите Ваш возраст`);
+        if (num2 <= 18 && num2 > 0){
+               alert(`Вы хороши и молоды, поздравляем!`);
+           }
+        else if (num2 <= 120 && num2 > 18) {
+           alert (`Вы молодец!`);
+       }
+        else {
+               alert(`Вы андроид`);
+           }
+    </script>
+
+     <!--Задание3-->
+      <script>
+   let num3 = +prompt(`Назовите любое число, чтобы узнать модуль этого числа`);
+        if (num3 < 0 || num3 > 0) {
+        alert(`Модуль числа ${Math.abs(num3)}`);}
+        else if (num3 === 0) {
+            alert(`Модуль числа 0 = 0`);}
+        else {
+        alert(`Вы указали не число`);
+        }
+    </script>
+    
+    <!--Задание4 (1)-->
+    <script>
+        let 
+  now = new Date(),
+  hour = now.getHours(),
+  minute = now.getMinutes(),
+  second = now.getSeconds(),
+  message = '';
+if (hour <= 6) {
+  message = 'Доброе время суток';
+} else if (hour <= 12) {
+  message = 'Доброе утро';
+} else if (hour <= 18) {
+  message = 'Добрый день';
+} else {
+  message = 'Добрый вечер';
+}
+minute = (minute < 10) ? '0' + minute : minute;
+second = (second < 10) ? '0' + second : second;
+hour = (hour < 10) ? '0' + hour : hour;
+
+message += ', сейчас ' + hour + ':' + minute + ':' + second;
+document.write(message);
+    </script>
+   
+<!--Задание4 (2)-->     
+    <script>
+    while (true){   
+   hour1 = +prompt(`Введите время в часах от 0 до 23`);
+         if ( hour1 > -1 && hour1 < 24 ) {
+             alert(`Очень хорошо!`);
+        break;}
+        else
+        {alert(`Столько  часов не бывает`)};
+    }
+        while (true){
+    minute1 = +prompt(`Введите время в минутах от 0 до 59`); 
+        if ( minute1 > -1 && minute1 < 60 ) {
+                alert(`Прекрасно!`);
+            break;}
+          else
+          {alert(`Столько  минут не бывает`)};
+        }
+        while (true){
+    second1 = +prompt(`Введите время в секундах от 0 до 59`);
+            if( second1 > -1 && second1 < 60){
+                alert(`Превосходно!`);
+            break;}
+         else
+         {alert(`Столько  секунд не бывает`)};
+        }
+     hour1 = (hour1 < 10) ? `0`+ hour1 : hour1;  
+     minute1 = (minute1 < 10) ? `0`+ minute1 : minute1;
+     second1 = (second1 < 10) ? `0`+ second1 : second1;  
+    
+    document.write(`Ваше время: ${hour1} : ${minute1} : ${second1}`);
+    
+    </script>
+    
+   <!--Задание5--> 
+    <script>
+       
+        valueX = +prompt(`Введите значение X`);
+        valueY = +prompt(`Введите значение Y`);      
+        
+        while (true) {
+        if ( valueX === 0 && valueY === 0) {
+             alert(`Ваши координаты в точке начала координат`);}
+        else if ( valueX > 0 && valueY > 0) {
+                alert(`Ваши координаты в первой четветри`);
+              break;}
+       else if ( valueX > 0 && valueY < 0) {
+                alert(`Ваши координаты в четвертой четветри`);
+             break;}
+        else if ( valueX < 0 && valueY < 0) {
+                alert(`Ваши координаты в третьей четветри`); 
+              break;}
+        else if ( valueX < 0 && valueY > 0) {
+                alert(`Ваши координаты во второй четветри`);
+          break;}
+        else if ( valueX == 0 || valueY == 0) {
+                alert(`Ваши координаты на оси абсцисс или оси ординат`); 
+            break;}
+          else
+          {alert(`Таких координат не существует`)
+          break;
+          };
+    }
+    document.write(`Ваши координаты:( ${valueX} , ${valueY} )`);
+    </script>
+    
+</body>
+
+</html>
